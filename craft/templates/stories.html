@@ -1,0 +1,50 @@
+{#
+ # Stories template
+ # ---------------
+ #
+
+ #}
+
+{% block content %}
+
+{% include "_head" %}
+
+
+<body class="container">
+
+{% include "_header" %}
+
+<section id="storiesIntro" class="typeset grid-10-center-middle">
+	<div class="col-10">
+		<h1>Stories</h1>
+		<p>Stay up to date on industry news and the landscape of the freelance world</p>
+	</div>
+</section>
+
+{# Get all entries within the stories section #}
+{% set entries = craft.entries.section('stories').find() %}
+
+{% if entries|length %}
+    {% for entry in entries %}
+    {% set image = entry.storiesImage.first() %}
+		<section class="stories typeset grid-10-center-middle">
+			<div class="col-11">
+				<h6>{{entry.storiesFilter.first( )}} | {{ entry.postDate | date("M d, Y") }}</h6>
+				<h4>{{ entry.title }}</h4>
+				<img src='{{image.getUrl()}}' />
+				{{ entry.body }}
+			</div>
+		</section>
+    {% endfor %}
+{% endif %}
+
+
+
+{% include "_footer" %}
+
+</body>
+</html>
+{% include "_scripts" %}
+
+{% endblock %}
+

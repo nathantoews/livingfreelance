@@ -1,0 +1,40 @@
+#storiesIntro {
+	height:70vh;
+	text-align:center;
+	background-image:linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ), url(../../images/storyOne.jpg);
+	background-size: cover;
+	background-position: 80%;
+	color:$white;
+	
+}
+
+
+.stories {
+	border-top:1px solid $lightgrey;
+	border-bottom:1px solid $lightgrey;
+	padding:2rem 0.5rem;
+	h4 {
+		font-weight:700;
+		font-family: unquote(map-get($headingtype, font-family));
+		color:$main;
+		margin-bottom:0;
+		padding:0;
+		margin-top:0.5rem;
+	}
+	h6 {
+		line-height:1.2;
+		padding:0;
+		margin:0;
+		font-family: unquote(map-get($bodytype, font-family));
+		color:$darkgrey;
+	}
+	p {
+		color:$grey;
+	}
+	img {
+		margin:1rem 0;
+	}
+}

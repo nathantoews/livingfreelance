@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 28.02">
+  <defs>
+    <style>
+      .cls-1,.cls-2{fill:none;stroke-width:3px;}.cls-1{stroke:#17abe1;}.cls-2{stroke:#fff;stroke-linecap:round;}
+    </style>
+  </defs>
+  <title>menu</title>
+
+  <path id="Line" data-name="Line" class="cls-2" d="M8.5,21l25,0"  transform="translate(0 0.01)" />
+  <path id="Line2" data-name="Line" class="cls-2" d="M8.5,15l22,0" transform="translate(0 0.01)" />
+  <path id="Line3" data-name="Line" class="cls-2" d="M8.5,9l22,0" transform="translate(0 0.01)" />
+</svg>

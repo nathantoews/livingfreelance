@@ -1,0 +1,129 @@
+#jobIntro {
+	height:70vh;
+	text-align:center;
+	background-image:linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ), url(../../images/JobBoard.jpg);
+	background-size: cover;
+	background-position: 80%;
+	color:$white;
+	
+}
+
+
+.job {
+	border-top:1px solid $lightgrey;
+	border-bottom:1px solid $lightgrey;
+	padding:2rem 0.5rem;
+	h4 {
+		font-weight:700;
+		font-family: unquote(map-get($bodytype, font-family));
+		color:$main;
+		margin-bottom:0;
+		padding:0;
+		margin-top:1rem;
+	}
+	h6 {
+		line-height:1.2;
+		padding:0;
+		margin:0;
+		font-family: unquote(map-get($bodytype, font-family));
+		color:$main;
+	}
+	p {
+		color:$grey;
+	}
+}
+
+ *:focus {
+   outline: 0;
+ }
+
+.custom-dropdown--large {
+	font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+	font-size: .7em;
+}
+
+.custom-dropdown__select{
+	font-size: inherit; /* inherit size from .custom-dropdown */
+	padding: .5em; /* add some space*/
+	margin: 0; /* remove default margins */
+}
+
+.custom-dropdown__select--white {
+	background-color: #fff;
+	color: $main; 
+}
+
+@supports (pointer-events: none) and
+	  ((-webkit-appearance: none) or
+	  (-moz-appearance: none) or
+	  (appearance: none)) {
+
+	.custom-dropdown {
+		width:100%;
+		text-align:right;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.custom-dropdown__select {
+		padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+		border: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;    
+	}
+
+	.custom-dropdown::before,
+	.custom-dropdown::after {
+		content: "";
+		pointer-events: none;
+	}
+
+	.custom-dropdown::after {
+		z-index:1;
+		position: relative;
+ /*  Custom dropdown arrow */
+		content: "\25BC";
+		height: 1em;
+		font-size: .625em;
+		line-height: 1;
+		right: 1.2em;
+		color:$main;
+		top: 50%; margin-top: -.5em;
+	}
+
+	.custom-dropdown::before { /*  Custom dropdown arrow cover */
+		width: 2em;
+		right: 0; top: 0; bottom: 0;
+	}
+
+	.custom-dropdown__select[disabled] {
+		color: rgba(0,0,0,.3);
+	}
+
+	.custom-dropdown.custom-dropdown--disabled::after {
+		color: rgba(0,0,0,.1);
+	}
+
+	/* White dropdown style */
+	.custom-dropdown--white::before {
+		background-color: #fff;
+	}
+
+	.custom-dropdown--white::after {
+		color:$main;
+	}
+
+	/* FF only temp fix */
+	@-moz-document url-prefix() {
+		.custom-dropdown__select 			 { padding-right: .9em }
+		.custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
+		.custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+	}
+}

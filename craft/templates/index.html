@@ -1,0 +1,76 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+
+ #}
+
+{% block content %}
+
+{% include "_head" %}
+
+
+<body class="container">
+
+{% include "_header" %}
+
+<section id="introHero" class="typeset grid-10-center-middle">
+	<div class="col-10">
+		<h1>Advice for Freelancers</h1>
+		<p>Living Freelance is a community of proffesionals in the creative industry with a passion for independance and an entrepreneurial spirit</p>
+		<a id="chevron" href="#jobHero">{% include 'final/images/Chevron.svg' %}</a>
+	</div>
+</section>
+
+<section id="jobHero" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<div class="magnify">{% include 'final/images/magnify.svg' %}</div>
+		<h1>Looking for your next gig?</h1>
+		<p>Search through our list of job openings or post your own</p>
+		<a href="/jobboard"class="mainBtn">View the list</a>
+	</div>
+</section>
+
+<section id="resources" class="typeset grid-12-center-middle">
+	<div class="col-12">
+		<div class="screens"></div>
+		<h1>Skill Building Resources</h1>
+		<ul class="grid-noGutter-center">
+			<li class="col-5">Education Tools</li>
+			<li class="col-5">Buisness Advice</li>
+			<li class="col-5">Image Libraries</li>
+			<li class="col-5">Inspiration</li>
+			<li class="col-5">Legal Information</li>
+			<li class="col-5">And More</li>
+		</ul>
+		<a href="/tools" class="mainBtn">See the library</a>
+	</div>
+</section>
+
+
+<section id="benefits" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<h1>Benefits Designed for Freelancers</h1>
+		<p>Living Freelance offers a flexible benefits program specifically designed for freelancers.</p>
+		<a class="mainBtn">Sign up now</a>
+	</div>
+</section>
+
+
+<section id="news" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<div class="envelope">{% include 'final/images/envelope.svg' %}</div>
+		<h1>Stay up to date</h1>
+		<p>Looking for a new job opening? Want to know about the new hackathon or skills workshop? Join our newsletter and get monthly updates</p>
+		<a class="mainBtn">Sign up now</a>
+	</div>
+</section>
+
+{% include "_footer" %}
+
+</body>
+</html>
+{% include "_scripts" %}
+
+{% endblock %}
+

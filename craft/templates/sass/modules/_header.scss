@@ -1,0 +1,412 @@
+// Header demo styles.
+// ---------------------------------------
+
+#gooseLogo {
+  fill:#fff;
+}
+
+// MAIN PAGE HOME PAGE ////////////////////////////////////////
+
+#introHero {
+  text-align:center;
+  color:#fff;
+  height:100vh;
+  background-image: url(../../images/HomepageFreelance.jpg);
+  background-size: cover;
+  background-position: 80%;
+}
+
+.global-header {
+  position:fixed;
+  font-size: 0;
+  width:100%;
+  z-index:2;
+  background:rgba(0,0,0,0.3);
+  height:55px;
+}
+
+.logoMobile {
+  z-index:1;
+  @include breakpoint(0,640) {
+    margin-left:1rem;
+    position:fixed;
+    width:100%;
+    top:0;
+    margin:0;
+    height:55px;
+    a {
+      color: transparent;
+      display: inline-block;
+      height: 100%;
+      margin:0 2%;
+      position: relative;
+      vertical-align: middle;
+      width: 60%;
+      @include centerFlex;
+
+      }
+  }
+  #logo {
+    z-index:1;
+  }
+}
+
+#chevron svg {
+  width:2rem;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:3rem;
+  margin:0 auto;
+}
+
+#jobHero {
+  text-align:center;
+  height:100vh;
+  background:#777;
+  color:#fff;
+
+  .magnify {
+    width:40%;
+    margin:0 auto;
+  }
+  .mainBtn {
+    color:#000;
+    background:$white;
+    border:2px solid $white;
+    @include button;
+  }
+  transition: transform 0.6s ease-in-out;
+}
+
+#resources {
+  text-align:center;
+  height:110vh;
+  background:$white;
+  color:#777;
+
+  h1 {
+    color:#777;
+  }
+
+  .screens {
+    height:200px;
+    width:100%;
+    background-image: url(../../images/screensOne.png);
+    background-size:65%;
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  .mainBtn {
+    border:none;
+    color:$white;
+    background:$main;
+    @include button;
+  }
+  ul {
+    list-style-type:none;
+    li {
+      @include centerFlex;
+      height:50px;
+      border-bottom:1px solid $lightgrey;
+      border-top:1px solid $lightgrey;
+      border-left:1px solid $lightgrey;
+      border-right:1px solid $lightgrey;
+      background:rgba(90,90,90,0.1);
+      padding:0;
+      margin:0;
+      text-indent:none;
+      text-decoration:none;
+    }
+  }
+}
+
+
+#benefits {
+  background-image: url(../../images/benefits.jpg);
+  background-size: cover;
+  background-position: 80%;
+  text-align:center;
+  height:100vh;
+  color:#fff;
+
+  .mainBtn {
+    color:#000;
+    background:$white;
+    border:2px solid $white;
+    @include button;
+  }
+}
+
+#news {
+  background:#777;
+  text-align:center;
+  height:100vh;
+  color:#fff;
+
+  .envelope {
+    width:40%;
+    margin:0 auto;
+  }
+  .mainBtn {
+    color:#000;
+    background:$white;
+    border:2px solid $white;
+    @include button;
+  }
+}
+
+
+footer {
+  background:$darkgrey;
+  padding:1rem;
+  width:100%;
+  .footerLogo {
+    border-bottom:1px solid $lightgrey;
+    margin-bottom:1rem;
+  }
+  ul {
+    padding:0 !important;
+    margin:0 !important;
+    list-style-type:none;
+    li {
+      height:40px;
+      text-align:center;
+      padding:0;
+      margin:0 auto !important;
+      text-indent:none;
+      text-decoration:none;
+      a {
+              color:#fff;
+
+      }
+    }
+  }
+}
+
+
+// Navigation demo styles.
+// ---------------------------------------
+
+
+#homeLogo {
+    width: 150px;
+    height: 65px;
+    padding:12.5px 5px;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    background-color:transparent;
+    overflow: hidden;
+    border: none;
+    color: transparent;
+    outline: none;
+}
+
+// Demo overrides.
+.main-nav {
+    border-top: 0.1rem solid darken($white, 15%);
+    display: inline-block;
+    width: calc(100% - 132px - 2rem);
+    vertical-align: middle;
+
+  .main-nav__list {
+      height:55px;
+      border: 0;
+      background-color: transparent;
+      margin-left: 0;
+      width: 100%;
+      text-align: right;
+      }
+
+  li {
+    height:55px;
+    padding:0 20px;
+    position:relative;
+    font-family: unquote(map-get($bodytype, font-family));
+    font-style: normal;
+    font-size:0.8rem !important;
+    font-weight: map-get($bodytype, regular);
+
+
+    a, span {
+      position:relative;
+      top:50%;
+      transform:translateY(-50%);
+      text-align:center;
+      vertical-align:middle;
+      user-select: none;
+      border-bottom: 0.1rem solid darken($white, 15%);
+      cursor: pointer;
+      display: block;
+      svg {
+        vertical-align:middle;
+        stroke:$main;
+        fill:$main;
+        height:2rem;
+      }
+      @include breakpoint (0,640) {
+        top:0;
+        transform:translateY(0);
+        text-align:left;
+      }
+    }
+
+      display: inline-block;
+      letter-spacing: 0.05rem;
+      width: auto;
+
+
+      a, span {
+        border: 0;
+        color: $white;
+      }
+    
+    @include breakpoint(break-2) {
+      @include fontsize(12, 2);
+    }
+
+    @include breakpoint(break-3) {
+      @include fontsize(12, 3);
+    }
+
+    @include breakpoint(break-4) {
+      @include fontsize(12, 4);
+    }
+  }
+}
+
+// MOBILE NAVIGATION STYLES /////////////////////////////////////////
+
+
+#trigger-overlay {
+  display:none;
+}
+#hexMenu {
+  display:none;
+}
+
+@media screen and (max-width:640px) {
+
+/* Effects */
+.overlay-slidedown {
+    transition: transform 0.5s ease-in-out, visibility 1s 0.5s;
+    visibility:hidden;
+}
+
+/* Overlay style */
+.overlay {
+  background-color:$white;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform:translateX(100%);
+  transition: transform 0.5s ease-in-out, visibility 1s 0.5s;
+        nav {
+    position:fixed;
+    top:22vh;
+    width:100%;
+    height: 0%;
+    opacity:1;
+    ul {
+      text-align: left;
+      list-style: none;
+      display: inline-block;
+      height: 100%;
+      position: relative;
+      li {
+        margin:0;
+        height: 54px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-bottom: 1px solid #ccc;
+        @include centerFlex;
+
+        a {
+          @include centerFlex;
+          font-size:1rem;
+          display: block;
+          color: #ccc;
+          font-family: unquote(map-get($bodytype, font-family));
+          transition: padding 0.2s ease;
+          &:hover {
+          transition: padding 0.2s ease;
+          padding-left:5%;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+.square-svg {
+  overflow:hidden;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  svg {
+    position:absolute;
+    width:100vw;
+    overflow:hidden;
+  }
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close, #trigger-overlay {
+  z-index:2;
+  display:block;
+  width: 50px;
+  position: fixed;
+  right: 15px;
+  top: 10px;
+  background-color:transparent;
+  overflow: hidden;
+  border: none;
+  color: transparent;
+  outline: none;
+  transition: transform 0.5s ease-in-out, visibility 0s 0.5s;
+}
+
+.close {
+  visibility:visible;
+    transition: transform 0.3s ease-in-out, visibility 0s 1s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.overlay-slidedown.open {
+    visibility: visible;
+    transform:translateX(0);
+    background-color:$white;
+    transition: transform 0.3s ease-in-out, visibility 0s 0.1s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  .cl-effect-3 a::after {
+    transform: translate(0%,100%);
+  }
+  .cl-effect-3 a:hover::after {
+    transform: translate(0%,100%);
+    color:#666;
+    height:100%;
+  }
+}
+
+}

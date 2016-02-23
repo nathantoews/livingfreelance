@@ -1,0 +1,63 @@
+#benefitsIntro {
+	height:70vh;
+	text-align:center;
+	background-image:linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ), url(../../images/storyThree.jpg);
+	background-size: cover;
+	background-position: 80%;
+	color:$white;	
+}
+
+
+#benOne {
+	text-align:center;
+	padding:2rem 0.5rem;
+	h1 {
+		color:$grey;
+	}
+}
+
+#benTwo {
+	padding:2rem 0.5rem;
+	background:$lightgrey;
+	text-align:center;
+	padding:2rem 0.5rem;
+	h1 {
+		color:$grey;
+	}
+}
+
+#benList {
+	padding:2rem 0.5rem;
+	.benLogo {
+		width:40%;
+		margin:0 auto;
+	}
+	h1 {
+		text-align:center;
+		color:$grey;
+	}
+	ul {
+		line-height:1.5rem;
+		list-style-type:none;
+			li {
+				padding:0.5rem 0;
+			}
+			li:before {
+				@include centerFlex;
+			    position: absolute;
+			    display: block;
+			    content: '\2022'; /* bullet point, for screen readers */
+			    text-indent: -999999px; /* move the bullet point out of sight */
+			    left: 1.5rem;
+			    width: 1.5rem; /* desired width of the image */
+			    height: 1.5rem; /* unrelated to image height; this is so it gets snipped */
+			    background-repeat: no-repeat;
+			    background-image:url(../../images/check.svg);
+			    background-size:contain;
+			    background-position:center;
+			}
+	}
+}

@@ -1,0 +1,80 @@
+{#
+ # Benefits template
+ # ---------------
+ #
+
+ #}
+
+{% block content %}
+
+{% include "_head" %}
+
+
+<body class="container">
+
+{% include "_header" %}
+
+<section id="benefitsIntro" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<h1>Benefits</h1>
+		<p>Affordable and flexible health benefits designed for freelancers </p>
+	</div>
+</section>
+
+<section id="benOne" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<h1>What do freelancers want?</h1>
+		<p>An easy to use website, a diversity of plans, Canada wide support, affordable and stable rates</p>
+	</div>
+</section>
+
+<section id="benTwo" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<h1>Our solution</h1>
+		<p>Partnering with a not for profit health and dental provider, Green Shield Canada</p>
+	</div>
+</section>
+
+<section id="benList" class="typeset grid-11-center-middle">
+	<div class="col-11">
+	<div class="benLogo">{% include 'final/images/benefits.svg' %}</div>
+	<h1>Why our Benefits program?</h1>
+	<ul>
+		<li>Plans for individuals, couples and families</li>
+		<li>Benefits are available to anyone who has provincial health coverage</li>
+		<li>Comprehensive health, drug, dental and travel coverage</li>
+		<li>Not for profit, guarenteed best price for freelancers</li>
+		<li>No waiting period - you become eligable right away</li>
+		<li>Join our opt out at any time</li>
+
+	</ul>
+	</div>
+</section>
+
+<section id="benefits" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<h1>Benefits Designed for Freelancers</h1>
+		<p>Living Freelance offers a flexible benefits program specifically designed for freelancers.</p>
+		<a class="mainBtn">Sign up now</a>
+	</div>
+</section>
+
+
+<section id="news" class="typeset grid-11-center-middle">
+	<div class="col-11">
+		<h1>Questions?</h1>
+		<p>If you still need more convincing, take a look at our frequently asked questions</p>
+		<a class="mainBtn">Sign up now</a>
+	</div>
+</section>
+
+
+
+{% include "_footer" %}
+
+</body>
+</html>
+{% include "_scripts" %}
+
+{% endblock %}
+

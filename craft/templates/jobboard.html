@@ -1,0 +1,60 @@
+{#
+ # Job Board template
+ # ---------------
+ #
+
+ #}
+
+{% block content %}
+
+{% include "_head" %}
+
+
+<body class="container">
+
+{% include "_header" %}
+
+<section id="jobIntro" class="typeset grid-10-center-middle">
+	<div class="col-10">
+		<h1>Job Board</h1>
+		<p>Search through our collection of job search resources to help you find new work.</p>
+	</div>
+</section>
+
+
+{# Get all categories within the work category group #}
+{% set category = craft.categories.group('jobSelect') %}
+<span class="custom-dropdown custom-dropdown--white">
+	<select id="workFilter" name="workFilter" class="custom-dropdown__select custom-dropdown__select--white">
+	    <option value="all">all</option>
+	    {% for cat in category %}
+	        <option value="{{ cat.slug }}">{{ cat.title }}</option>
+	    {% endfor %}
+	</select>
+</span>
+
+{# Get all entries within the work section #}
+{% set entries = craft.entries.section('jobs').find() %}
+
+{% if entries|length %}
+    {% for entry in entries %}
+		<section data-category="{{ entry.filter.first }}" class="job typeset grid-10-center-middle">
+			<div class="col-11">
+				<h4>{{ entry.title }}</h4>
+				<h6>{{ entry.filter.first }}</h6>
+				{{ entry.body }}
+			</div>
+		</section>
+    {% endfor %}
+{% endif %}
+
+
+
+{% include "_footer" %}
+
+</body>
+</html>
+{% include "_scripts" %}
+
+{% endblock %}
+
